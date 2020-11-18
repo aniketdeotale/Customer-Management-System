@@ -53,7 +53,7 @@ namespace ACM.BLTest
 
             Assert.AreEqual(expected, actual);
         }
-
+        [TestMethod]
         public void StaticTest()
         {
             var c1 = new Customer();
@@ -69,6 +69,38 @@ namespace ACM.BLTest
             Customer.InstanceCount += 1;
 
             Assert.AreEqual(3, Customer.InstanceCount);
+        }
+
+        [TestMethod]
+        public void ValidateValid()
+        {
+           var customer = new Customer
+            {
+                LastName = "Aniket",
+                EmailAddress = "Aniket.deotale@gmail.com"
+
+            };
+            var expected = true;
+
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            var customer = new Customer
+            {
+                
+                EmailAddress = "Aniket.deotale@gmail.com"
+
+            };
+            var expected = false;
+
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

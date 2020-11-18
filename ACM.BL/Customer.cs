@@ -11,6 +11,16 @@ namespace ACM.BL
     public class Customer
     {
 
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerID = customerId;
+        }
+
         public int CustomerID { get; private set; }
         public string EmailAddress { get; set; }
 
@@ -44,6 +54,26 @@ namespace ACM.BL
             {
                 _lastName = value;
             }
+        }
+
+      
+
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
+
+        
+
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        
         }
     }
 }
