@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CMS.Common;
 
 namespace ACM.BL
 {
 
     
-    public class Customer
+    public class Customer :EntityBase, iLoggable
     {
 
-        public Customer()
+        public Customer(): this(0)
         {
 
         }
@@ -19,8 +20,10 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             CustomerID = customerId;
+            AddressList = new List<Address>();
         }
-
+        public int CustomerType { get; set; }
+        public List<Address> AddressList { get; set; }
         public int CustomerID { get; private set; }
         public string EmailAddress { get; set; }
 
@@ -40,7 +43,10 @@ namespace ACM.BL
                 return fullName;
             }
         }
-
+        public override string ToString()
+        {
+            return FullName;
+        }
         public static int InstanceCount{ get; set; }
         public string FirstName { get; set; }
         private string _lastName;
@@ -58,6 +64,15 @@ namespace ACM.BL
 
       
 
+        public string Log()
+        {
+            var logString = CustomerID + ": " + FullName + " " +
+                "Email: " + EmailAddress + " " +
+                "Status: " + EntityState.ToString();
+            return logString;
+
+        }
+
         public List<Customer> Retrieve()
         {
             return new List<Customer>();
@@ -65,7 +80,7 @@ namespace ACM.BL
 
         
 
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 

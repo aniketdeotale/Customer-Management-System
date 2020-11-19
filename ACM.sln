@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{47DFD652
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "Tests\ACM.BLTest\ACM.BLTest.csproj", "{4C0C4165-E4F3-4C35-AFE7-F86B58308E6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Common", "CMS.Common\CMS.Common.csproj", "{26AAA1A0-E81C-4FEB-80D0-08FE3FBDE28D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.CommonTests", "CMS.CommonTests\CMS.CommonTests.csproj", "{1C35F074-6E38-4DB3-9AE8-6BB0123B2ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,21 @@ Global
 		{4C0C4165-E4F3-4C35-AFE7-F86B58308E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C0C4165-E4F3-4C35-AFE7-F86B58308E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C0C4165-E4F3-4C35-AFE7-F86B58308E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26AAA1A0-E81C-4FEB-80D0-08FE3FBDE28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26AAA1A0-E81C-4FEB-80D0-08FE3FBDE28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26AAA1A0-E81C-4FEB-80D0-08FE3FBDE28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26AAA1A0-E81C-4FEB-80D0-08FE3FBDE28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C35F074-6E38-4DB3-9AE8-6BB0123B2ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C35F074-6E38-4DB3-9AE8-6BB0123B2ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C35F074-6E38-4DB3-9AE8-6BB0123B2ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C35F074-6E38-4DB3-9AE8-6BB0123B2ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4C0C4165-E4F3-4C35-AFE7-F86B58308E6B} = {47DFD652-7765-4312-B6FB-516D042F97F9}
+		{1C35F074-6E38-4DB3-9AE8-6BB0123B2ABD} = {47DFD652-7765-4312-B6FB-516D042F97F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2764237E-FCD0-4C59-A26F-97B1E1F37E2C}
